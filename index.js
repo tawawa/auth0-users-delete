@@ -43,13 +43,14 @@ var deleteUser = function (user) {
     url: process.env.V2_ENDPOINT_URL + 'users/' + userId,
     headers: {
       'cache-control': 'no-cache',
-      authorization: 'Bearer' + process.env.MANAGEMENT_TOKEN
+      authorization: 'Bearer ' + process.env.MANAGEMENT_TOKEN
     }
   };
-  request(options, function (error/*, response, body */) {
+  request(options, function (error, response, body ) {
     if (error) {
       return deferred.reject(new Error(error));
     }
+    console.log(body);
     console.log('Delete completed for: ' + userId);
     return deferred.resolve();
   });
