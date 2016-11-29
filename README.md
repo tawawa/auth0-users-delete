@@ -48,3 +48,13 @@ See `package.json` for available scripts. It is possible to create mock data, ru
   "prestart-mockapi": "npm run generate-mock-data",
   "start-mockapi": "json-server --watch api/db.json --port 3001
 ```
+
+#### Run
+
+Just use (from the base of the project):
+
+`npm start`
+
+equivalent to:
+
+`node index.js`
